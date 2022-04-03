@@ -1,8 +1,5 @@
 package com.prep.library.service.impl;
 
-import com.prep.library.entity.Book;
-import com.prep.library.repository.BookRepository;
-import com.prep.library.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
