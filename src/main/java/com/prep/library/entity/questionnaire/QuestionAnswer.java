@@ -6,7 +6,7 @@ import com.prep.library.view.View;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "ques_ans")
 @Table(name="question_answer")
 public class QuestionAnswer {
     @Id
@@ -17,13 +17,16 @@ public class QuestionAnswer {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name="question")
     @JsonBackReference
+    @JsonView(View.Public.class)
     private Question question;
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonBackReference
+    @JsonView(View.Public.class)
     @JoinColumn(name="answer")
     private Answer answer;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name="questionnaire_id")
+    @JsonView(View.Public.class)
     @JsonBackReference
     private Questionnaire questionnaire;
 

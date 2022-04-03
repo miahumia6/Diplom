@@ -3,6 +3,7 @@ package com.prep.library.service;
 import com.prep.library.entity.questionnaire.Answer;
 import com.prep.library.entity.questionnaire.Question;
 import com.prep.library.entity.questionnaire.Questionnaire;
+import com.prep.library.pojo.questionnaire.QuestionnaireResponse;
 
 import java.util.List;
 import java.util.Map;
@@ -13,4 +14,5 @@ public interface QuestionnaireService {
     void save(Map<Question,Answer> questionAnswerMap);
     List<Questionnaire> findAll();
     Optional<Questionnaire> findById(long id);
+    QuestionnaireResponse findAllQuestionnaires();
 }

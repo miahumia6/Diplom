@@ -23,10 +23,9 @@ public class QuestionnairesController {
     @Autowired
     QuestionnaireService questionnaireService;
 
-    @JsonView(View.Public.class)
     @GetMapping("/questionnaires")
-    public List<Questionnaire> getAllQuestionnaires() {
-        return questionnaireService.findAll();
+    public QuestionnaireResponse get() {
+        return questionnaireService.findAllQuestionnaires();
     }
 
     @GetMapping("/questionnaires/{id}")
@@ -34,7 +33,7 @@ public class QuestionnairesController {
         return questionnaireService.findById(id);
     }
 
-    @PostMapping("/questionnaires")
+    @PostMapping("/submitQuestionnaire")
     public ResponseEntity<?> createQuestionnaire(@RequestBody List<AnswerRequest> answerRequests) {
 
         Map<Question, Answer> questionAnswerMap = new HashMap<>();
