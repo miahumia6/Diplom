@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "text_question",
+      "value": "Simple text input question example"
+    },
+    {
+      "id": 2,
+      "type": "bool_question",
+      "value": "Checkbox bool_question example"
+    },
+    {
+      "id": 3,
+      "type": "select_question",
+      "value": "Select question example",
+      "values": [
+        "value 1",
+        "value 2",
+        "value 3"
+      ]
+    }
+  ]
+}
